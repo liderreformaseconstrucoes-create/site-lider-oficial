@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Líder Reformas e Construções</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;color:#12304f}
+a{text-decoration:none;color:inherit}
+.header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e7e7e7}
+.nav{max-width:1150px;margin:auto;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:28px;font-weight:800;line-height:1}
+.brand small{display:block;margin-top:10px;font-size:15px;line-height:1.35;color:#69737f;font-weight:700}
+.menu{display:flex;align-items:center;gap:34px;flex-wrap:wrap}
+.menu a{font-size:18px;font-weight:500;color:#12304f}
+.btn-main{display:inline-block;background:#d2ae63;padding:18px 34px;border-radius:999px;font-weight:800;color:#12304f}
+.wrap{max-width:1150px;margin:auto;padding:0 20px}
+.hero{padding:42px 0 28px}
+.hero-box{background:linear-gradient(rgba(18,48,79,.88),rgba(18,48,79,.88)), url('assets/serra_01.jpg') center/cover;border-radius:36px;padding:34px;min-height:470px;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+.hero-content{max-width:720px;color:#fff}
+.badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:18px 28px;border-radius:999px;font-size:18px;margin-bottom:22px}
+.hero h1{font-size:64px;line-height:1.03;margin:0 0 22px;font-weight:800}
+.hero p{font-size:24px;line-height:1.6;margin:0 0 30px;color:#f2f2f2}
+.hero-actions{display:flex;gap:18px;flex-wrap:wrap}
+.btn-light{display:inline-block;background:#d2ae63;color:#12304f;padding:22px 34px;border-radius:999px;font-size:20px;font-weight:800}
+.btn-outline{display:inline-block;border:4px solid rgba(255,255,255,.7);color:#fff;padding:18px 32px;border-radius:999px;font-size:18px;font-weight:800}
+.section{padding:24px 0 40px}
+.section-tag{color:#c9a85d;letter-spacing:.12em;font-size:16px;font-weight:800;margin:0 0 10px}
+.section h2{font-size:56px;line-height:1.05;margin:0 0 18px}
+.section p.lead{font-size:22px;line-height:1.6;color:#5c6773;max-width:920px;margin:0 0 28px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:28px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.04)}
+.card img{width:100%;height:260px;object-fit:cover;display:block}
+.card-body{padding:26px}
+.card h3{font-size:22px;margin:0 0 12px}
+.card p{font-size:18px;line-height:1.6;color:#5f6b78;margin:0}
+.services .card{padding:0}
+.service-card{padding:28px}
+.album-feature{background:#fff;border-radius:28px;border:1px solid #e7e7e7;overflow:hidden}
+.album-feature img{width:100%;height:460px;object-fit:cover;display:block}
+.album-body{padding:28px}
+.album-body h3{font-size:30px;margin:0 0 12px}
+.album-body p{font-size:20px;color:#5f6b78;line-height:1.65;margin:0 0 24px}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testimonial{background:#fff;border:1px solid #e7e7e7;border-radius:24px;padding:22px;font-size:18px;line-height:1.6;color:#5d6874}
+.contact-box{background:#12304f;color:#fff;border-radius:28px;padding:34px;display:flex;justify-content:space-between;gap:30px;align-items:center;flex-wrap:wrap}
+.contact-box h3{font-size:34px;margin:0 0 10px}
+.contact-box p{font-size:18px;line-height:1.7;margin:0;color:#e7ecf1}
+footer{padding:28px 0 50px;color:#6b7480;font-size:15px}
+@media (max-width:980px){
+  .hero h1{font-size:48px}
+  .section h2{font-size:42px}
+  .cards,.testimonials{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .nav{align-items:flex-start}
+  .menu{gap:18px}
+  .menu a{font-size:16px}
+  .btn-main{padding:16px 24px}
+  .hero{padding-top:22px}
+  .hero-box{min-height:0;padding:28px 18px 28px;border-radius:26px}
+  .badge{font-size:16px;padding:14px 18px}
+  .hero h1{font-size:34px}
+  .hero p{font-size:17px}
+  .btn-light{font-size:18px;padding:18px 22px}
+  .btn-outline{font-size:17px;padding:16px 22px;border-width:3px}
+  .section h2{font-size:30px}
+  .section p.lead,.album-body p{font-size:17px}
+  .card img{height:220px}
+  .album-feature img{height:280px}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="nav">
+    <div class="brand">Líder<small>Reformas e<br>Construções</small></div>
+    <nav class="menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <a class="btn-main" href="#contato">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-box">
+      <div class="hero-content">
+        <div class="badge">BH e região metropolitana • 15 anos de experiência</div>
+        <h1>Líder Reformas e Construções em BH e Região Metropolitana</h1>
+        <p>Há 15 anos transformando apartamentos e casas com acabamento profissional, organização e compromisso com prazo.</p>
+        <div class="hero-actions">
+          <a class="btn-light" href="#contato">Solicitar orçamento no WhatsApp</a>
+          <a class="btn-outline" href="#projetos">Ver projetos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap services" id="servicos">
+    <p class="section-tag">SERVIÇOS</p>
+    <h2>Reforma com qualidade, confiança e alto padrão de acabamento</h2>
+    <p class="lead">Atendimento para apartamentos e residências com foco em execução limpa, visual moderno e resultado final valorizado.</p>
+    <div class="cards">
+      <article class="card"><div class="service-card"><h3>Banheiros modernos</h3><p>Execução com porcelanato, nichos, iluminação, louças, metais e acabamento detalhado.</p></div></article>
+      <article class="card"><div class="service-card"><h3>Cozinhas e áreas integradas</h3><p>Projetos que melhoram circulação, estética e aproveitamento do espaço, com acabamento profissional.</p></div></article>
+      <article class="card"><div class="service-card"><h3>Gesso, pintura e iluminação</h3><p>Forro, sancas, iluminação em LED, pintura e detalhes que valorizam o ambiente.</p></div></article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="projetos">
+    <p class="section-tag">PROJETOS REALIZADOS</p>
+    <h2>Obras executadas pela Líder Reformas e Construções</h2>
+    <p class="lead">Confira algumas obras realizadas em Belo Horizonte, com destaque para reforma de apartamentos, banheiros, salas, cozinhas e acabamento em geral.</p>
+    <div class="cards">
+      <article class="card">
+        <img src="assets/serra_02.jpg" alt="Banheiro moderno">
+        <div class="card-body">
+          <h3>Banheiros modernos</h3>
+          <p>Execução com porcelanato, nichos, iluminação, louças, metais e acabamento detalhado.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/serra_04.jpg" alt="Sala reformada">
+        <div class="card-body">
+          <h3>Salas e ambientes integrados</h3>
+          <p>Visual clean, iluminação valorizada e acabamento final pensado para elevar o padrão do imóvel.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/serra_06.jpg" alt="Piso em execução">
+        <div class="card-body">
+          <h3>Pisos e acabamento geral</h3>
+          <p>Execução técnica com nivelamento, paginação e atenção aos detalhes do começo ao fim da obra.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <p class="section-tag">PORTFÓLIO DE OBRA</p>
+    <article class="album-feature">
+      <img src="assets/serra_01.jpg" alt="Capa do álbum Obra bairro Serra BH">
+      <div class="album-body">
+        <h3>Obra bairro Serra/BH</h3>
+        <p>Banheiro, sala, piso e acabamento final em um álbum completo da obra.</p>
+        <a class="btn-main" href="albuns/serra-bh.html">Ver álbum</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section wrap">
+    <p class="section-tag">CONFIANÇA</p>
+    <h2>O que nossos clientes procuram em uma reforma</h2>
+    <div class="testimonials">
+      <div class="testimonial">“Serviço muito bem feito, com acabamento impecável e atendimento profissional.”</div>
+      <div class="testimonial">“Reforma entregue com qualidade, organização e muito capricho.”</div>
+      <div class="testimonial">“Empresa séria, com ótimo resultado final e compromisso com o cliente.”</div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="contato">
+    <div class="contact-box">
+      <div>
+        <h3>Solicite seu orçamento</h3>
+        <p>Líder Reformas e Construções • BH e região metropolitana<br>Atendimento profissional para reformas com alto padrão.</p>
+      </div>
+      <a class="btn-light" href="#">Chamar no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  Líder Reformas e Construções
+</footer>
+</body>
+</html>
